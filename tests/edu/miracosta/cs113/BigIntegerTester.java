@@ -77,7 +77,7 @@ public class BigIntegerTester {
         BigInteger bigInt = new BigInteger(initial);
         bigInt.add(add);
         String stringAnswer = bigInt.toString();
-        assertEquals(stringAnswer, expected);
+        assertEquals(expected, stringAnswer);
     }
 
 
@@ -196,7 +196,7 @@ public class BigIntegerTester {
         BigInteger bigInt = new BigInteger(initial);
         bigInt.subtract(subtract);
         String stringAnswer = bigInt.toString();
-        assertEquals(stringAnswer, expected);
+        assertEquals(expected, stringAnswer);
     }
 
 
