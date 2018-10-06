@@ -10,6 +10,8 @@ public class BigInteger implements BigNumber {
 
     /***************************************************************
      * This constructor Initializes the project with these numbers.
+     * @param bigInt - Linked list of ints.
+     * @param negative - boolean that tells us if the number is negative.
      ***************************************************************/
     public BigInteger(String n)
     {
