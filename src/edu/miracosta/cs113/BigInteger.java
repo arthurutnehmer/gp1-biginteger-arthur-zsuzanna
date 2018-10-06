@@ -8,6 +8,9 @@ public class BigInteger implements BigNumber {
     private LinkedList<Integer> bigInt ;
     private boolean negative ;
 
+    /***************************************************************
+     * This constructor Initializes the project with these numbers.
+     ***************************************************************/
     public BigInteger(String n)
     {
         bigInt = new LinkedList<Integer>();
@@ -25,11 +28,15 @@ public class BigInteger implements BigNumber {
         }
 
 
-
     }
 
-    public BigInteger() {
-
+    /***************************************************************
+     * This constructor Initializes with empty list and false boolean..
+     ***************************************************************/
+    public BigInteger()
+    {
+        bigInt = new LinkedList<Integer>();
+        negative = false;
     }
 
     @Override
