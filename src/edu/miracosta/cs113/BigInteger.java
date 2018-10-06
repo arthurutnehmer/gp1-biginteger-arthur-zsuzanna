@@ -1,14 +1,16 @@
 package edu.miracosta.cs113;
 
 import java.util.LinkedList;
+import java.util.StringTokenizer;
 
 public class BigInteger implements BigNumber {
 
     private LinkedList<Integer> bigInt ;
     private boolean negative ;
 
-    public BigInteger(String n) {
-
+    public BigInteger(String n)
+    {
+        StringTokenizer string = new StringTokenizer();
     }
 
     public BigInteger() {
