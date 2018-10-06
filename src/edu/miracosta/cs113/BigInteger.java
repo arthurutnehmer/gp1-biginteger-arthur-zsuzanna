@@ -10,7 +10,22 @@ public class BigInteger implements BigNumber {
 
     public BigInteger(String n)
     {
-        StringTokenizer string = new StringTokenizer();
+        bigInt = new LinkedList<Integer>();
+        negative = false;
+        StringTokenizer StringsOfNumber = new StringTokenizer(n, ",");
+
+        while (StringsOfNumber.hasMoreTokens())
+        {
+            int nextInt = Integer.parseInt(StringsOfNumber.nextToken());
+            if(nextInt < 0)
+            {
+                negative = true;
+            }
+            bigInt.add(nextInt);
+        }
+
+
+
     }
 
     public BigInteger() {
