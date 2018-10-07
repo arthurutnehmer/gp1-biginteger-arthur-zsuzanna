@@ -46,10 +46,9 @@ public class BigInteger implements BigNumber {
     public String toString() {
         String digit = "" ;
         String digitTemp = "" ;
-
         Integer digitInt = 0 ;
-
         Iterator iter = bigInt.iterator() ;
+
         if (iter.hasNext()) {
             digitInt = (Integer) iter.next() ;
             digit +=  digitInt ;
