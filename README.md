@@ -26,10 +26,11 @@ The following problem will be done in groups of two using Agile Development (Scr
 >As a ***programmer using the BigInteger class*** I want to ***be able to represent numbers of any size, negative or positive,*** so that ***I can display them to the user***.
 
 **Documentation Diagrams**:
+[ ![sprint 1 biginteger foundation 1](https://user-images.githubusercontent.com/31230409/46577132-91e6d600-c993-11e8-9983-bb18752027e8.jpg)]
 
 ![UML class diagram for BigInteger Sprint 1](doc/UML_BigInteger_Sprint1.png)
 
-[ ***insert example of drawing here*** ]
+[ ![untitled diagram-page-1 2](https://user-images.githubusercontent.com/31230409/46577108-d7ef6a00-c992-11e8-8e7e-04cc329d0a4d.jpg) ]
 
 **Definition Of Done**:
 - [  ] General requirements 
@@ -42,13 +43,14 @@ The following problem will be done in groups of two using Agile Development (Scr
 	- [  ] Commas ignored in all tests
 - [  ] Complete following statement in space below:
 >Our strategy for implementing addition/subtraction for Sprint 2 is [ ***type your approach here in 2-3 sentences*** ].
-- [  ] Product owner agrees
+- [We plan on adding one digit at a time in each node and carry the remainder to the next node.  For subtraction, we will subtract and move the index over. if the number contains zero for subtraction we will turn the zero to a 9 and subtract the next index by 1 ] Product owner agrees
 
 ## Sprint 2 (BigInteger arithmetic + driver)
 **User Story**:
 >As a ***programmer using the BigInteger class*** I want to ***be able to add and subtract numbers of any size, negative or positive,*** so that ***I can do arithmetic operations on huge numbers***.
 
 **Documentation Diagrams**:
+[  ![sprint 1 biginteger foundation](https://user-images.githubusercontent.com/31230409/46577115-23097d00-c993-11e8-9881-3b5f26075438.jpg)]
 
 ![UML class diagram for BigInteger Sprint 2](doc/UML_BigInteger_Sprint2.png)
 

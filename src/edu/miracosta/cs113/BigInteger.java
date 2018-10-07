@@ -4,6 +4,9 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
+/**
+ * BigInteger implements BigNumber to display, add and subtract large Integers using LinkedList
+ */
 public class BigInteger implements BigNumber {
 
     private LinkedList<Integer> bigInt ;
@@ -33,9 +36,9 @@ public class BigInteger implements BigNumber {
 
     }
 
-    /***************************************************************
+    /**
      * This constructor Initializes with empty list and false boolean..
-     ***************************************************************/
+     */
     public BigInteger()
     {
         bigInt = new LinkedList<Integer>();
@@ -46,10 +49,9 @@ public class BigInteger implements BigNumber {
     public String toString() {
         String digit = "" ;
         String digitTemp = "" ;
-
         Integer digitInt = 0 ;
-
         Iterator iter = bigInt.iterator() ;
+
         if (iter.hasNext()) {
             digitInt = (Integer) iter.next() ;
             digit +=  digitInt ;
