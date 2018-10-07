@@ -46,11 +46,15 @@ public class BigInteger implements BigNumber {
     public String toString() {
         String digit = "" ;
         String digitTemp = "" ;
+
         Integer digitInt = 0 ;
 
         Iterator iter = bigInt.iterator() ;
-
-
+        if (iter.hasNext()) {
+            digitInt = (Integer) iter.next() ;
+            digit +=  digitInt ;
+            digit +="," ;
+        }
         while (iter.hasNext()) {
             digitInt = (Integer) iter.next() ;
             digitTemp = String.format("%03d", digitInt) ;
@@ -58,7 +62,6 @@ public class BigInteger implements BigNumber {
             digit +="," ;
         }
         digit = digit.substring(0, digit.length() - 1) ;
-
         return digit ;
     }
 
