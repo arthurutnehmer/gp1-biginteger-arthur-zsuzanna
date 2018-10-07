@@ -1,5 +1,6 @@
 package edu.miracosta.cs113;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
@@ -40,6 +41,27 @@ public class BigInteger implements BigNumber {
         bigInt = new LinkedList<Integer>();
         negative = false;
     }
+
+    @Override
+    public String toString() {
+        String digit = "" ;
+        String digitTemp = "" ;
+        Integer digitInt = 0 ;
+
+        Iterator iter = bigInt.iterator() ;
+
+
+        while (iter.hasNext()) {
+            digitInt = (Integer) iter.next() ;
+            digitTemp = String.format("%03d", digitInt) ;
+            digit +=  digitTemp ;
+            digit +="," ;
+        }
+        digit = digit.substring(0, digit.length() - 1) ;
+
+        return digit ;
+    }
+
 
     @Override
     public void add(int n) {
