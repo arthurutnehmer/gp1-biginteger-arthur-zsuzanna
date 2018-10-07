@@ -43,7 +43,7 @@ The following problem will be done in groups of two using Agile Development (Scr
 	- [  ] Commas ignored in all tests
 - [  ] Complete following statement in space below:
 >Our strategy for implementing addition/subtraction for Sprint 2 is [ ***type your approach here in 2-3 sentences*** ].
-- [  ] Product owner agrees
+- [We plan on adding one digit at a time in each node and carry the remainder to the next node.  For subtraction, we will subtract and move the index over. if the number contains zero for subtraction we will turn the zero to a 9 and subtract the next index by 1 ] Product owner agrees
 
 ## Sprint 2 (BigInteger arithmetic + driver)
 **User Story**:
