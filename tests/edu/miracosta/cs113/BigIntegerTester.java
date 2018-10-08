@@ -5,7 +5,9 @@ import static org.junit.Assert.*;
 import org.junit.Ignore;
 import org.junit.Test;
 
-public class BigIntegerTester {
+//import java.math.BigInteger;
+
+public class BigIntegerTester  {
 
 
     /* SPRINT 1 TESTS */
@@ -206,7 +208,7 @@ public class BigIntegerTester {
      * Simple subtraction test to make sure the leading 0 is terminated
      * @result A common error may be 01 or accidental addition
      */
-    @Ignore //remove when ready to test this method!!!
+    //@Ignore //remove when ready to test this method!!!
     @Test
     public void subtractionSimpleTest(){
         subtractTest("53", "52", "1");
@@ -217,7 +219,7 @@ public class BigIntegerTester {
      * @result A common error may be 3999 or 00001 or a reversed operation like 1997, there are many incorrect results
      * that could occur
      */
-    @Ignore //remove when ready to test this method!!!
+    //@Ignore //remove when ready to test this method!!!
     @Test
     public void subtractionCarryTest(){
         subtractTest("2,000", "1,999", "1");
@@ -227,7 +229,7 @@ public class BigIntegerTester {
      * Check subtraction when the initial value is larger than the subtractor
      * @result A common error may be -1 as only 0-1 was done and then the process terminates
      */
-    @Ignore //remove when ready to test this method!!!
+   // @Ignore //remove when ready to test this method!!!
     @Test
     public void subtractionCarryTestSwap(){
         subtractTest("2,000", "1", "1,999");
@@ -237,7 +239,7 @@ public class BigIntegerTester {
      * Check that we can render a negative number with a very simple subtraction
      * @result A common error may be 2 or 8
      */
-    @Ignore //remove when ready to test this method!!!
+    //@Ignore //remove when ready to test this method!!!
     @Test
     public void subtractionNegativeTestPositives(){
         subtractTest("3", "5", "-2");
@@ -247,7 +249,7 @@ public class BigIntegerTester {
      * Check negative subtraction when the intiial value is 1 digit and the subtractor is 2
      * @result A common error may be 84 in the case of reversed addition or something else
      */
-    @Ignore //remove when ready to test this method!!!
+    //@Ignore //remove when ready to test this method!!!
     @Test
     public void subtractionNegativeTestPositives2(){
         subtractTest("4", "44", "-40");
@@ -257,7 +259,7 @@ public class BigIntegerTester {
      * Check negative subtraction for a 2 digit and three digit where multiple borrows must happen
      * @result Depending on implementation this test can go ary in many different ways.
      */
-    @Ignore //remove when ready to test this method!!!
+    //@Ignore //remove when ready to test this method!!!
     @Test
     public void subtractionNegativeTestPositives3(){
         subtractTest("44", "436", "-392");
@@ -267,7 +269,7 @@ public class BigIntegerTester {
      * Show that subtracting a negative is the same as a positive
      * @result Common error would be actually subtracting and getting -392
      */
-    @Ignore //remove when ready to test this method!!!
+    //@Ignore //remove when ready to test this method!!!
     @Test
     public void subtractionNegativeTestNegative(){
         subtractTest("44", "-436", "480");
@@ -277,7 +279,7 @@ public class BigIntegerTester {
      * Check subtracting a negative from a positive works, this is really the same as adding in the negative world
      * @result A common mistake may be following the same logic as adding, so -44+436=-392
      */
-    @Ignore //remove when ready to test this method!!!
+    //@Ignore //remove when ready to test this method!!!
     @Test
     public void subtractionNegativeTestNegativeSwap(){
         subtractTest("-44", "436", "-480");
@@ -287,7 +289,7 @@ public class BigIntegerTester {
      * Check that subtracting a negative from a negative works
      * @result Should show that it is the same as adding the second value common error would be -480
      */
-    @Ignore //remove when ready to test this method!!!
+    //@Ignore //remove when ready to test this method!!!
     @Test
     public void subtractionNegativeTestBothNegatives(){
         subtractTest("-436", "-44", "-392");
@@ -298,7 +300,7 @@ public class BigIntegerTester {
      * Show that the subtraction works for large numbers
      * @result Demonstrates the bigInt works for huge numbers
      */
-    @Ignore //remove when ready to test this method!!!
+    //@Ignore //remove when ready to test this method!!!
     @Test
     public void subtractionHugeTest(){
         subtractTest("46,376,937,677,490,009,712,648,124,896,970,078,050,417,018,260,538",
