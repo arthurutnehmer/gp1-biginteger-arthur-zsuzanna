@@ -89,7 +89,7 @@ public class BigIntegerTester {
      * addition
      * @result Should be fourteen as we carry the ten after adding
      */
-    @Ignore //remove when ready to test this method!!!
+     //remove when ready to test this method!!!
     @Test
     public void additionCarryTest() {
         additionTest("5","9","14");
@@ -99,7 +99,7 @@ public class BigIntegerTester {
      * Demonstrate that the bigInteger can operate when the initial is longer than the adder
      * @result The most common mistake would be returning 10 as it adds only until the adder is done and overwrites
      */
-    @Ignore //remove when ready to test this method!!!
+     //remove when ready to test this method!!!
     @Test
     public void additionCarryTestMedium() {
         additionTest("9,999","1","10,000");
