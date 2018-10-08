@@ -351,6 +351,12 @@ public class BigInteger implements BigNumber {
 
     }
 
+    public void subtract(int incoming)
+    {
+        String in = Integer.toString(incoming) ;
+        subtract(in);
+    }
+
     @Override
     public void subtract(String deductString) {
         // if Huge Number, use helper method
@@ -419,7 +425,8 @@ public class BigInteger implements BigNumber {
      * Helper Subtract method in case Integer math cannot be computed for Huge Integers
      * @param deductString incoming String object of Huge Integer to to deduct from this list
      */
-    private void helperSubtract(String deductString) {
+    private void helperSubtract(String deductString)
+    {
         String temp = "" ;
 
         // stripping incoming string of commas
@@ -438,40 +445,31 @@ public class BigInteger implements BigNumber {
         int end = deductString.length() ;
         int start = end  - 3 ;
 
-        while (m.hasPrevious()){
+        while (m.hasPrevious()) {
             if (start < 0) {
-                start = 0 ; // guarding agains negative in substring index
+                start = 0; // guarding agains negative in substring index
             }
-            temp = deductString.substring(start, end) ;
+            temp = deductString.substring(start, end);
 
-            end = start ;
-            start = end - 3 ;
-            value = Integer.valueOf(temp) ;
-            valueOrig = (int) m.previous() ;
+            end = start;
+            start = end - 3;
+            value = Integer.valueOf(temp);
+            valueOrig = (int) m.previous();
 
             // if a need to borrow
             if (carry == true) {
-                valueOrig -= 1 ;
+                valueOrig -= 1;
             }
-            carry = false ;
+            carry = false;
             if (valueOrig < value) {
-                valueOrig += 1000 ;
-                carry = true ;
+                valueOrig += 1000;
+                carry = true;
             }
 
-            total = valueOrig - value ;
-            m.set(total) ;
-
+            total = valueOrig - value;
+            m.set(total);
         }
-    public void add(String n)
-    {
-
-    }
-
-    @Override
-    public void add(int n) {
-
-    }
+        }
 
     @Override
     public void add(String n) {
