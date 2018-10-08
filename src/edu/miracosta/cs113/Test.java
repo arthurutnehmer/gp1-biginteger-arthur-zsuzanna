@@ -21,12 +21,12 @@ public class Test
             largeNumber.add(line);
         }
         fileReader.close();
-    } catch (IOException e) {
+    } catch (IOException e)
+        {
         e.printStackTrace();
     }
 
     System.out.println(largeNumber);
-
 
 
     }

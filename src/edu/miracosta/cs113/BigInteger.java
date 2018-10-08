@@ -473,17 +473,18 @@ public class BigInteger implements BigNumber {
         LinkedList<Integer> SmallInt = new LinkedList<Integer>();
         LinkedList<Integer> newBigInt = new LinkedList<Integer>();
         String NumberToDecode = "";
-        while (StringsOfNumber.hasMoreTokens()) {
+        while (StringsOfNumber.hasMoreTokens())
+        {
             NumberToDecode += StringsOfNumber.nextToken();
         }
 
-        for (int i = 0; i < NumberToDecode.length(); i++)
+        for (int i = (NumberToDecode.length())-1; i > -1; i--)
         {
-            SmallInt.add(Integer.parseInt(NumberToDecode.substring(i, i + 1)));
+            SmallInt.add(Integer.parseInt(NumberToDecode.substring(i, i+1)));
         }
 
 
-        if (NumberToDecode.length() < 22) {
+        if (NumberToDecode.length() < 10) {
 
             this.add(Integer.parseInt(n.replace(",", "")));
 
@@ -511,24 +512,31 @@ public class BigInteger implements BigNumber {
                         int newNumber;
                         number1 = number1 / 10;
 
-                        if (iteratorTwo.hasNext()) {
+                        if (iteratorTwo.hasNext())
+                        {
                             NumberTwo = (Integer) iteratorTwo.next();
                             newNumber = NumberOne + NumberTwo + remainder;
-                            if (newNumber < 10) {
+                            if (newNumber < 10)
+                            {
                                 newBigInt.add(newNumber);
                                 remainder = 0;
-                            } else if (newNumber >= 10) {
+                            } else if (newNumber >= 10)
+                            {
                                 newBigInt.add(newNumber % 10);
                                 remainder = 1;
                             }
 
-                        } else {
+                        }
+                        else
+                            {
                             NumberTwo = 0;
                             newNumber = NumberOne + NumberTwo + remainder;
-                            if (newNumber < 10) {
+                            if (newNumber < 10)
+                            {
                                 newBigInt.add(newNumber);
                                 remainder = 0;
-                            } else if (newNumber >= 10) {
+                            } else if (newNumber >= 10)
+                            {
                                 newBigInt.add(newNumber % 10);
                                 remainder = 1;
                             }
